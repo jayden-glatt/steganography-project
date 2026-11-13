@@ -66,15 +66,15 @@ MAX_PIXELS = 2_000_000    # Largest image accepted (about 1400 x 1400)
 DATA_URL_START = "data:image/png;base64,"
 
 # Site information required by the course (see the deployment instructions).
-# TODO: replace the author email, planning file name, and links with your real ones.
+
 set_site_information(
-    author="Jayden Glatt (your_email@udel.edu)",
+    author="Jayden Glatt (jayglatt@udel.edu)",
     description="""Hide secret text messages inside images using LSB steganography.
     Upload an image, choose a color channel, and download the modified image.""",
     sources=["Official Drafter documentation",
              "Conversations with Gemini and Claude (uploaded to this repository)"],
     planning=["your_planning_document.pdf"],
-    links=["https://github.com/your-username/your-repo"],
+    links=["https://github.com/jayden-glatt/steganography-project"],
 )
 hide_debug_information()  # Comment this line out while debugging
 set_website_title("LSB Image Steganographer")
