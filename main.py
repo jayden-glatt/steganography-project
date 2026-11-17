@@ -33,26 +33,7 @@ from dataclasses import dataclass
 
 from bakery import assert_equal
 from PIL import Image as PILImage
-from drafter import (
-    Page,
-    Button,
-    TextArea,
-    SelectBox,
-    FileUpload,
-    Download,
-    RawHTML,
-    Table,
-    NumberedList,
-    Header,
-    HorizontalRule,
-    LineBreak,
-    set_site_information,
-    hide_debug_information,
-    set_website_title,
-    set_website_framed,
-    start_server,
-    route,
-)
+from drafter import *
 
 
 # ---------------------------------------------------------------------------
@@ -67,13 +48,15 @@ DATA_URL_START = "data:image/png;base64,"
 
 # Site information required by the course (see the deployment instructions).
 
+set_website_style("daub")
+
 set_site_information(
     author="Jayden Glatt (jayglatt@udel.edu)",
     description="""Hide secret text messages inside images using LSB steganography.
     Upload an image, choose a color channel, and download the modified image.""",
     sources=["Official Drafter documentation",
-             "Conversations with Gemini and Claude (uploaded to this repository)"],
-    planning=["your_planning_document.pdf"],
+             "Conversations with Gemini, Claude, and Chat GPT (uploaded to this repository)"],
+    planning=["Glatt Steg Project Pick a Problem","Glatt Steg Project Design"],
     links=["https://github.com/jayden-glatt/steganography-project"],
 )
 hide_debug_information()  # Comment this line out while debugging
